@@ -187,14 +187,14 @@ if __name__ == "__main__":
     skill = SnipsOWM(config["secret"]["api_key"],
             config["secret"]["default_location"],locale=skill_locale.decode('ascii'))
     
-    lang = "EN"
     with Hermes(MQTT_ADDR.encode("ascii")) as h:
         h.skill = skill
-        h.subscribe_intent("searchWeatherForecastItem",
+        h.subscribe_intent("Martin1887:buscarPronosticoDeObjeto",
                            searchWeatherForecastItem) \
-        .subscribe_intent("searchWeatherForecastTemperature",
+        .subscribe_intent("Martin1887:buscarPronosticoDeTemperatura",
                           searchWeatherForecastTemperature) \
-        .subscribe_intent("searchWeatherForecastCondition",
+        .subscribe_intent("Martin1887:buscarPronosticoDeObjeto",
                           searchWeatherForecastCondition) \
-        .subscribe_intent("searchWeatherForecast", searchWeatherForecast) \
+        .subscribe_intent("Martin1887:buscarPronostico",
+                          searchWeatherForecast) \
         .loop_forever()
