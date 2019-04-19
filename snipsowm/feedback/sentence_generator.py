@@ -173,7 +173,7 @@ class AnswerSentenceGenerator(SentenceGenerator):
             print "Careful! There was an error while trying to set the locale {}. This means your locale is not properly installed. Please refer to the README for more information.".format(full_locale)
             print "Some information displayed might not be formated to your locale"
 
-        return utils.date_to_string(date, granularity)
+        return 'el {}'.format(utils.date_to_string(date, granularity))
 
 
 class ConditionQuerySentenceGenerator(AnswerSentenceGenerator):
