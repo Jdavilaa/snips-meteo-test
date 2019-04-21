@@ -171,7 +171,11 @@ class SentenceGenerator(object):
             print "Careful! There was an error while trying to set the locale {}. This means your locale is not properly installed. Please refer to the README for more information.".format(full_locale)
             print "Some information displayed might not be formated to your locale"
 
-        return 'el {}'.format(date_to_string(date, granularity))
+        date_str = utils.date_to_string(date, granularity)
+        if date_str:
+            date_str = 'el {}'.format(date_str)
+
+        return date_str
 
     def generate_condition_description(self, condition_description):
         return condition_description if len(condition_description) > 0 else ""
