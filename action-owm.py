@@ -193,7 +193,7 @@ if __name__ == "__main__":
                            searchWeatherForecastItem) \
         .subscribe_intent("Martin1887:buscarPronosticoDeTemperatura",
                           searchWeatherForecastTemperature) \
-        .subscribe_intent("Martin1887:buscarPronosticoDeObjeto",
+        .subscribe_intent("Martin1887:buscarPronosticoDeCondicion",
                           searchWeatherForecastCondition) \
         .subscribe_intent("Martin1887:buscarPronostico",
                           searchWeatherForecast) \
